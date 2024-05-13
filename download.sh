@@ -66,7 +66,8 @@ function unsup_simcse() {
     mv ./wiki1m_for_simcse.txt ./datasets/unsup-simcse/train.txt
 }
 
-for func in sts12 sts13 sts14 sts15 sts16 stsb sick sup_simcse unsup_simcse; do
+# sts12 sts13 sts14 sts15 sts16 stsb sick sup_simcse unsup_simcse;
+for func in sts12; do
     $func > /dev/null 2>&1 &
 done
 
